@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"time"
 
 	"github.com/filleokus/hemlis/internal/hemlis"
@@ -65,6 +66,27 @@ func PrintSecretToCLI(secret hemlis.GeneratedSecret) {
 	}
 }
 
+func SaveSecretToDisk(secret hemlis.GeneratedSecret) {
+	// Open a new file for writing only
+	file, err := os.Create(fmt.Sprintf("%s.txt", secret.PublicKeyString()))
+	if err != nil {
+		fmt.Println("Error creating file:", err)
+		return
+	}
+	defer file.Close()
+
+	// Write strings to the file
+	fmt.Fprintf(file, "# Public Key: %s\n", secret.PublicKeyString())
+	fmt.Fprintf(file, "# Private Key: %s\n", secret.PrivateKeyString())
+	for i, share := range secret.Shares() {
+		fmt.Fprintf(file, "# Share %d (%s)\n", i, share.Identifier)
+		for _, word := range share.Words {
+			fmt.Fprintf(file, "%s\n", word)
+		}
+		fmt.Fprintf(file, "\n")
+	}
+}
+
 type PDFOptions struct {
 	IncludeNumberOfShares      bool
 	IncludeThreshold           bool
@@ -76,4 +98,5 @@ func main() {
 	secret, _ := hemlis.GenerateSecret(6, 4)
 	PrintSecretToCLI(*secret)
 	GeneratePDF(*secret, PDFOptions{IncludeNumberOfShares: true, IncludeThreshold: true, InlcudePublicKey: true, DangerousIncludePrivateKey: true})
+	SaveSecretToDisk(*secret)
 }
