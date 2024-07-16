@@ -2,16 +2,23 @@
 
 Hemlis is a CLI tool which generates an [age](https://github.com/FiloSottile/age) keypair and split the private key into shares using [Samir's secret sharing](https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing). They shares are encoded into words using the [Bytewords wordlist](https://github.com/BlockchainCommons/bc-bytewords) to make the shares easier to write or speak compared to a hex string.
 
-![Hemlis](https://github.com/filleokus/hemlis/raw/main/screenshot.png "Hemlis")
+![Hemlis](https://github.com/filleokus/hemlis/raw/main/example/screenshot.png "Hemlis")
 
 ## Features
 - Built in, customizible, PDF generation
-  - Generate with blank spaces and write the words manually with pen and paper or include them in the [PDF](https://github.com/filleokus/hemlis/raw/main/examples/example.pdf)
+  - Generate with blank spaces and write the words manually with pen and paper or include them in the [PDF](https://github.com/filleokus/hemlis/blob/main/example/example-included-wordlist.pdf)
     - First method suggested unless you have access to a secure printer
   - Include / redact number of shares generated, threshold, and public key
     - If public key is included, a QR code of it is in the PDF
 - "Checksum" of share included in PDF
   - Last 5 charachters of SHA256 hash included as identifier
+
+## Installation
+```
+git clone https://github.com/filleokus/hemlis.git
+cd hemlis
+go build ./cmd/hemlis-combine && ./cmd/hemlis-gen
+```
 
 ## Usage example
 `hemlis-gen` generates the keypair and shares. `hemlis-combine` reconstructs it.

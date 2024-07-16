@@ -1,0 +1,343 @@
+%PDF-1.3
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 11859>>
+stream
+0 J
+0 j
+0.57 w
+0.000 G
+0.000 g
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 10.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 28.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 28.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 28.00 Tf ET
+BT 28.35 785.54 Td (Secret Share) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 23.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 23.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 23.00 Tf ET
+BT 28.35 756.53 Td (d721a) Tj ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT 311.81 754.53 Td (Parameters) Tj ET
+2.83 w
+28.35 745.09 m 283.46 745.09 l S
+0.57 w
+2.83 w
+311.81 745.09 m 566.93 745.09 l S
+0.57 w
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 20.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 20.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 20.00 Tf ET
+q 0.910 0.141 0.016 rg BT 28.35 717.01 Td (This is a share of a private ) Tj ET Q
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 20.00 Tf ET
+q 0.910 0.141 0.016 rg BT 28.35 697.01 Td (encryption key, keep it safe. ) Tj ET Q
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 668.31 Td (This document was produced by Hemlis ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 652.77 Td (\(github.com/filleokus/hemlis\). It contains a ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 637.23 Td (share of an age private key split using Samir ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 621.69 Td (Secret Sharing as implemented by Hashicorp's ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 606.14 Td (Vault. The share is encoded into words from ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 590.60 Td (the Bytewords wordlist. ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 569.10 Td (Using Hemlis \(or another implementation\) the ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 553.56 Td (private key can be recovered if enough shares ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 538.02 Td (are collected. ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 311.81 725.01 Td (During the creation of the secret shares the ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 311.81 709.46 Td (following parameters were used ) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 684.49 Td (Hemlis version: 0.1.0) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 670.31 Td (Creation date: 2024-07-16T15:00:46Z) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 656.14 Td (Number of shares: 7) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 641.97 Td (Treshold: 4) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 627.80 Td (Public Key: age13n2p4ucf8ufjkq9wvx80rafv) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 613.62 Td (hm7xeq7zy0ma7pxa9sav7ayy8gxq88hmtm) Tj ET
+q 96.37795 0 0 96.37795 396.85039 498.89764 cm /I47845b53d1ee902a69cc17edea47455b66e5a719 Do Q
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 8.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 8.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 8.00 Tf ET
+BT 422.46 488.06 Td (Public Key) Tj ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT 28.35 471.06 Td (Key material) Tj ET
+2.83 w
+28.35 461.34 m 566.93 461.34 l S
+0.57 w
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 431.87 Td (  0: away) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 431.87 Td ( 16: inky) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 409.20 Td (  1: lava) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 409.20 Td ( 17: webs) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 386.52 Td (  2: list) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 386.52 Td ( 18: poem) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 363.84 Td (  3: drum) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 363.84 Td ( 19: beta) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 341.17 Td (  4: curl) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 341.17 Td ( 20: curl) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 318.49 Td (  5: user) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 318.49 Td ( 21: edge) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 295.81 Td (  6: sets) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 295.81 Td ( 22: ruby) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 273.13 Td (  7: vial) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 273.13 Td ( 23: kick) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 250.46 Td (  8: idea) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 250.46 Td ( 24: task) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 227.78 Td (  9: idle) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 227.78 Td ( 25: zone) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 205.10 Td ( 10: zero) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 205.10 Td ( 26: door) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 182.43 Td ( 11: item) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 182.43 Td ( 27: fund) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 159.75 Td ( 12: cost) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 159.75 Td ( 28: tied) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 137.07 Td ( 13: chef) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 137.07 Td ( 29: inky) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 114.39 Td ( 14: loud) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 114.39 Td ( 30: iris) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 91.72 Td ( 15: vows) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 91.72 Td ( 31: numb) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 69.04 Td ( 32: view) Tj ET
+
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+/MediaBox [0 0 595.28 841.89]
+>>
+endobj
+5 0 obj
+<</Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+6 0 obj
+<</Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+7 0 obj
+<</Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+8 0 obj
+<</Type /XObject
+/Subtype /Image
+/Width 33
+/Height 33
+/ColorSpace /DeviceRGB
+/BitsPerComponent 8
+/Filter /DCTDecode
+/Length 1522>>
+stream
+ÿØÿÛ „ 		
+ $.' ",#(7),01444'9=82<.342			2!!22222222222222222222222222222222222222222222222222ÿÀ  ! !" ÿÄ¢          	
+   } !1AQa"q2‘¡#B±ÁRÑð$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùú       	
+  w !1AQaq"2B‘¡±Á	#3RðbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? ÃÞ½‡RÒ]ôhÒM(E
+ørX® ¸ImLîó›uÂNI2C~[öúãEð®Õ®.d¶¿¼x¯u›‹{e²œ¥Ã“FñºD™âG|I)(ñ<ÐmôAâ8µ)ü‰á·»y'6—73Üi¶ñ"ñ½R@öñ¡DY@GóR@¨ºy¯"²µ7º¿o…õ§Ùo ‚Òwš6Y"WrXÉ<’FË²/4«ÄÑÂ¶æU Èc«^E¦^C¥éPI{wml–«_Ùß½[yV&FÌ‘:±…Y÷IæÌ6²ÛréRßkmúZGyf÷³Þ\ÞèSj/}iöK06OöV$ågÏú³–É ôŽçI¼‹ÄÖÚh~N¥åMe|dˆ±’àÊ“ fŠåwÍå2Ê¤–*pÏ+Þhq5O›M.mnû[‘RßP‹P™dº˜4þb[JgX’e‰PFw3²@ß¹}ñ‚çð‚xÃþ…Msÿ Óñ4Â	ãú5ÏüMÿ Ä×Óÿ Ùßõ+øçÿ 
+?þî£û;þ¥ÿ áGÿ ÝÔåX{KxcÒÓ(û&ÔõF&³=¨¸‰Ùaóv+ù>kI%>Jïdt¾…Õ½«Ûkº$Ú+¢KuÆ§£±³‹OG¸Y£eÛç¤±ªÉ>åE}±H¨+Wô{Ý^êëF7vÆÖ´iâ¿žÂÓì’–Ý|¨ÀµR»ÌÁvÉ•Ãc©¬È¥ÑôÝ.´i¾¹ûjÖÒNí°îx"˜J­æ¢Éö‚ØUÑ!?4iæ I/‚<altí™b6óÛïÌ3nX™íZUß2£ý­[Î8 ¢³ˆC¬—Ó[M¬øZòORÓÑ®·0²FÅ>É¬í%’YR3T>èvÆø›z¦µ¦ih±½Ô§°Ö4x¤e"XnrÉå¶BÜ,æiNIFY~fVgHŒ<Å¾‡u®hz}½¾™cáÛ¯ìû‹æ–h-ç½ºO*&QâGfvƒÇhu2pÑÿ øM¿êÿ ™7ÿ ·Qÿ 	·ýAó&ÿ öê?áTÔ‘ÿ ûíGü*ú’?òÿ }¨È<	ÿ %Ã_öµÿ Ñ«^àOøûð×ý‚­ôþµçþÿ ’‡á¯û
+Úÿ èÕ¯@ð'ü}økþÁV¿úZ ßøÿ "EçýÆôõm\€äXñüÿ Mº•wÿ ÿ äH¼ÿ ¸Ïþž­«€ðü‹"ÿ ÿ é·R ¯è¢Š ÿÙ
+endstream
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 6 0 R
+/Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 7 0 R
+/F0a76705d18e0494dd24cb573e53aa0a8c710ec99 5 0 R
+>>
+/XObject <<
+/I47845b53d1ee902a69cc17edea47455b66e5a719 8 0 R
+>>
+/ColorSpace <<
+>>
+>>
+endobj
+9 0 obj
+<<
+/Producer (þÿ F P D F   1 . 7)
+/CreationDate (D:20240716170046)
+/ModDate (D:20240716170046)
+>>
+endobj
+10 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/Names <<
+/EmbeddedFiles << /Names [
+  
+] >>
+>>
+>>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000011997 00000 n 
+0000014061 00000 n 
+0000000009 00000 n 
+0000000087 00000 n 
+0000012084 00000 n 
+0000012180 00000 n 
+0000012281 00000 n 
+0000012375 00000 n 
+0000014369 00000 n 
+0000014482 00000 n 
+trailer
+<<
+/Size 11
+/Root 10 0 R
+/Info 9 0 R
+>>
+startxref
+14580
+%%EOF
