@@ -72,7 +72,7 @@ func (s *GeneratedSecret) NumberOfShares() uint {
 	return s.numberOfShares
 }
 
-func shareIdentifier(share []byte) string {
+func ShareIdentifier(share []byte) string {
 	hash := sha256.Sum256(share)
 	hashHex := hex.EncodeToString(hash[:])
 	lastFiveChars := hashHex[len(hashHex)-5:]
@@ -83,8 +83,8 @@ func (s *GeneratedSecret) Shares() []Share {
 	sharesBytes, _ := SplitSecret(s.privateKeyBytes, s.threshold, s.numberOfShares)
 	shares := make([]Share, len(sharesBytes))
 	for shareIndex, shareBytes := range sharesBytes {
-		identifier := shareIdentifier(shareBytes)
 		words := EncodeBytesToWords(shareBytes)
+		identifier := ShareIdentifier(shareBytes)
 		shares[shareIndex] = Share{Identifier: identifier, Words: words}
 	}
 	return shares
