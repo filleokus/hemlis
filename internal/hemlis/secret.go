@@ -5,7 +5,6 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"strings"
 
 	"filippo.io/age"
 	"github.com/filleokus/hemlis/internal/bech32"
@@ -84,8 +83,8 @@ func (s *GeneratedSecret) Shares() []Share {
 	sharesBytes, _ := SplitSecret(s.privateKeyBytes, s.threshold, s.numberOfShares)
 	shares := make([]Share, len(sharesBytes))
 	for shareIndex, shareBytes := range sharesBytes {
-		words := strings.Split(EncodeBytesToWords(shareBytes), " ")
 		identifier := shareIdentifier(shareBytes)
+		words := EncodeBytesToWords(shareBytes)
 		shares[shareIndex] = Share{Identifier: identifier, Words: words}
 	}
 	return shares
