@@ -14,11 +14,11 @@ type GeneratedSecret struct {
 	privateKeyBytes, publicKeyBytes []byte
 	recipient                       *age.X25519Identity
 	numberOfShares, threshold       uint
+	shares                          []Share
 }
 
 type Share struct {
-	Identifier string
-	Words      []string
+	bytes []byte
 }
 
 func GenerateSecret(numberOfShares, threshold uint) (*GeneratedSecret, error) {
@@ -45,12 +45,19 @@ func GenerateSecret(numberOfShares, threshold uint) (*GeneratedSecret, error) {
 		return nil, fmt.Errorf("failed to decode private key: %v", err)
 	}
 
+	shares := make([]Share, numberOfShares)
+	sharesBytes, _ := SplitSecret(privateKeyBytes, threshold, numberOfShares)
+	for shareIndex, shareBytes := range sharesBytes {
+		shares[shareIndex] = Share{bytes: shareBytes}
+	}
+
 	secret := &GeneratedSecret{
 		recipient:       recipient,
 		publicKeyBytes:  publicKeyBytes,
 		privateKeyBytes: privateKeyBytes,
 		numberOfShares:  numberOfShares,
 		threshold:       threshold,
+		shares:          shares,
 	}
 
 	return secret, nil
@@ -79,13 +86,14 @@ func ShareIdentifier(share []byte) string {
 	return lastFiveChars
 }
 
+func (s *Share) Identifier() string {
+	return ShareIdentifier(s.bytes)
+}
+
+func (s *Share) Words() []string {
+	return EncodeBytesToWords(s.bytes)
+}
+
 func (s *GeneratedSecret) Shares() []Share {
-	sharesBytes, _ := SplitSecret(s.privateKeyBytes, s.threshold, s.numberOfShares)
-	shares := make([]Share, len(sharesBytes))
-	for shareIndex, shareBytes := range sharesBytes {
-		words := EncodeBytesToWords(shareBytes)
-		identifier := ShareIdentifier(shareBytes)
-		shares[shareIndex] = Share{Identifier: identifier, Words: words}
-	}
-	return shares
+	return s.shares
 }

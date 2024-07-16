@@ -20,7 +20,7 @@ func GeneratePDF(secret hemlis.GeneratedSecret, share hemlis.Share, pdfOptions P
 		Threshold:        ParamRedacted,
 		PublicKeyString:  ParamRedacted,
 		KeyMaterialWords: []string{},
-		ShareIdentifier:  share.Identifier,
+		ShareIdentifier:  share.Identifier(),
 	}
 	if pdfOptions.IncludeNumberOfShares {
 		parameters.NumberOfShares = fmt.Sprintf("%d", secret.NumberOfShares())
@@ -32,7 +32,7 @@ func GeneratePDF(secret hemlis.GeneratedSecret, share hemlis.Share, pdfOptions P
 		parameters.PublicKeyString = secret.PublicKeyString()
 	}
 	if pdfOptions.IncludeWords {
-		parameters.KeyMaterialWords = share.Words
+		parameters.KeyMaterialWords = share.Words()
 	}
 	return CreatePDFDocument(parameters)
 }
@@ -40,8 +40,8 @@ func GeneratePDF(secret hemlis.GeneratedSecret, share hemlis.Share, pdfOptions P
 func PrintSecretToCLI(secret hemlis.GeneratedSecret) {
 	shares := secret.Shares()
 	for shareIndex, share := range shares {
-		fmt.Printf("Share %d (%s)\n", shareIndex+1, share.Identifier)
-		words := share.Words
+		fmt.Printf("Share %d (%s)\n", shareIndex+1, share.Identifier())
+		words := share.Words()
 		const chunkSize = 5
 		for chunkIndex := 0; chunkIndex < len(words); chunkIndex += chunkSize {
 			end := chunkIndex + 5
@@ -73,8 +73,8 @@ func SaveSecretToDisk(secret hemlis.GeneratedSecret) {
 	fmt.Fprintf(file, "# Public Key: %s\n", secret.PublicKeyString())
 	fmt.Fprintf(file, "# Private Key: %s\n", secret.PrivateKeyString())
 	for i, share := range secret.Shares() {
-		fmt.Fprintf(file, "# Share %d (%s)\n", i, share.Identifier)
-		for _, word := range share.Words {
+		fmt.Fprintf(file, "# Share %d (%s)\n", i, share.Identifier())
+		for _, word := range share.Words() {
 			fmt.Fprintf(file, "%s\n", word)
 		}
 		fmt.Fprintf(file, "\n")
@@ -139,7 +139,7 @@ func main() {
 				InlcudePublicKey:      *includePublicKey,
 				IncludeWords:          *includeWords,
 			})
-			pdf.Save(fmt.Sprintf("%s.pdf", share.Identifier))
+			pdf.Save(fmt.Sprintf("%s.pdf", share.Identifier()))
 		}
 		if !*includeWords {
 			fmt.Println("Print the PDF's and manually write the words on the papers")
