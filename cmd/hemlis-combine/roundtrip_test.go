@@ -13,7 +13,7 @@ func TestExpectedWorkingRoundTrip(t *testing.T) {
 	t.Logf("Generated secret: %s\n", secret.PrivateKeyString())
 	var randomWords [][]string = make([][]string, 4)
 	for i := 0; i < 4; i++ {
-		randomWords[i] = shares[i].Words
+		randomWords[i] = shares[i].Words()
 	}
 	combinedSecret, err := combineShares(randomWords)
 	if err != nil {

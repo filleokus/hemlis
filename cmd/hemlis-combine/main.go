@@ -33,7 +33,7 @@ The file should have the following format:
 	} else if *filePath != "" {
 		file, err := os.Open(*filePath)
 		if err != nil {
-			fmt.Printf("error opening file: %w\n", err)
+			fmt.Printf("error opening file: %s\n", err)
 			os.Exit(1)
 		}
 		defer file.Close()
@@ -71,53 +71,38 @@ func readAndParseShares(scanner *bufio.Scanner) (string, error) {
 	if err := scanner.Err(); err != nil {
 		fmt.Fprintf(os.Stderr, "reading standard input: %v\n", err)
 	}
-	err := verifyShares(shares)
-	if err != nil {
-		return "", fmt.Errorf("invalid share (aborting): %s", err)
-	}
 
-	bytes, err := decodeSharesToBytes(shares)
-	if err != nil {
-		return "", fmt.Errorf("invalid share (aborting): %s", err)
-	}
-	combinedSecret, err := combineShareBytes(bytes)
+	combinedSecret, err := combineShares(shares)
 	if err != nil {
 		return "", fmt.Errorf("could not combine shares: %s", err)
 	}
 	return combinedSecret, nil
 }
 
-func verifyShares(shares [][]string) error {
+func combineShares(shares [][]string) (string, error) {
 	for i, share := range shares {
 		if len(share) != 33 {
-			return fmt.Errorf("share %d has %d words, expected 33", i, len(share))
+			return "", fmt.Errorf("share %d has %d words, expected 33", i, len(share))
 		}
 		for j, word := range share {
 			if len(word) != 4 {
-				return fmt.Errorf("share %d, word %d: (%s) has %d characters, expected 4", i, j, word, len(word))
+				return "", fmt.Errorf("share %d, word %d: (%s) has %d characters, expected 4", i, j, word, len(word))
 			}
 		}
 	}
-	return nil
-}
 
-func decodeSharesToBytes(shares [][]string) ([][]byte, error) {
 	var byteSlices [][]byte
 
 	for i, share := range shares {
 		bytes, err := hemlis.DecodeWordsToBytes(share)
 		if err != nil {
-			return nil, fmt.Errorf("share index %d, could not decode to bytes: %s", i, err)
+			return "", fmt.Errorf("share index %d, could not decode to bytes: %s", i, err)
 		}
 		fmt.Printf("✅ Share %d (%s) decoded\n", i, hemlis.ShareIdentifier(bytes))
 		byteSlices = append(byteSlices, bytes)
 	}
 
-	return byteSlices, nil
-}
-
-func combineShareBytes(shares [][]byte) (string, error) {
-	secretBytes, err := hemlis.CombineSecret(shares)
+	secretBytes, err := hemlis.CombineSecret(byteSlices)
 	if err != nil {
 		return "", fmt.Errorf("could not combine secrets: %s", err)
 	}
@@ -126,4 +111,5 @@ func combineShareBytes(shares [][]byte) (string, error) {
 		return "", fmt.Errorf("could not bech32 encode secret: %s", err)
 	}
 	return secretString, nil
+
 }
