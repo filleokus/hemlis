@@ -107,7 +107,7 @@ func keyMaterialSection(parameters PDFParams) []core.Row {
 	rows := []core.Row{}
 	styling := props.Text{Size: 16, Align: align.Left, Family: "Courier", Top: 0}
 	words := make([]string, 33)
-	if parameters.KeyMaterialWords == nil {
+	if parameters.KeyMaterialWords == nil || len(parameters.KeyMaterialWords) == 0 {
 		for i := 0; i < 33; i++ {
 			words[i] = "__   __   __   __"
 		}
