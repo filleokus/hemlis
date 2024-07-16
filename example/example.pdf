@@ -1,0 +1,341 @@
+%PDF-1.3
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 12288>>
+stream
+0 J
+0 j
+0.57 w
+0.000 G
+0.000 g
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 10.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 28.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 28.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 28.00 Tf ET
+BT 28.35 785.54 Td (Secret Share) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 23.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 23.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 23.00 Tf ET
+BT 28.35 756.53 Td (52f19) Tj ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT 311.81 754.53 Td (Parameters) Tj ET
+2.83 w
+28.35 745.09 m 283.46 745.09 l S
+0.57 w
+2.83 w
+311.81 745.09 m 566.93 745.09 l S
+0.57 w
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 20.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 20.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 20.00 Tf ET
+q 0.910 0.141 0.016 rg BT 28.35 717.01 Td (This is a share of a private ) Tj ET Q
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 20.00 Tf ET
+q 0.910 0.141 0.016 rg BT 28.35 697.01 Td (encryption key, keep it safe. ) Tj ET Q
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 668.31 Td (This document was produced by Hemlis ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 652.77 Td (\(github.com/filleokus/hemlis\). It contains a ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 637.23 Td (share of an age private key split using Samir ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 621.69 Td (Secret Sharing as implemented by Hashicorp's ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 606.14 Td (Vault. The share is encoded into words from ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 590.60 Td (the Bytewords wordlist. ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 569.10 Td (Using Hemlis \(or another implementation\) the ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 553.56 Td (private key can be recovered if enough shares ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 28.35 538.02 Td (are collected. ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 311.81 725.01 Td (During the creation of the secret shares the ) Tj ET
+BT /F0a76705d18e0494dd24cb573e53aa0a8c710ec99 12.00 Tf ET
+BT 311.81 709.46 Td (following parameters were used ) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 684.49 Td (Hemlis version: 0.1.0) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 670.31 Td (Creation date: 2024-07-16T14:24:51Z) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 656.14 Td (Number of shares: 3) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 641.97 Td (Treshold: 2) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 627.80 Td (Public Key: age1t509ehdgvk27dpyq2wkevvj2) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 10.00 Tf ET
+BT 311.81 613.62 Td (m5nr67numtuzdkuavcx93c863cus6x3qjq) Tj ET
+q 96.37795 0 0 96.37795 396.85039 498.89764 cm /Id5ea71c4e8cbb192f941fdf76d4221f79143bd26 Do Q
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 8.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 8.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 8.00 Tf ET
+BT 422.46 488.06 Td (Public Key) Tj ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT /Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 25.00 Tf ET
+BT 28.35 471.06 Td (Key material) Tj ET
+2.83 w
+28.35 461.34 m 566.93 461.34 l S
+0.57 w
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 431.87 Td (  0: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 431.87 Td ( 16: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 409.20 Td (  1: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 409.20 Td ( 17: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 386.52 Td (  2: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 386.52 Td ( 18: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 363.84 Td (  3: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 363.84 Td ( 19: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 341.17 Td (  4: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 341.17 Td ( 20: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 318.49 Td (  5: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 318.49 Td ( 21: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 295.81 Td (  6: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 295.81 Td ( 22: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 273.13 Td (  7: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 273.13 Td ( 23: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 250.46 Td (  8: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 250.46 Td ( 24: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 227.78 Td (  9: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 227.78 Td ( 25: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 205.10 Td ( 10: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 205.10 Td ( 26: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 182.43 Td ( 11: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 182.43 Td ( 27: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 159.75 Td ( 12: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 159.75 Td ( 28: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 137.07 Td ( 13: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 137.07 Td ( 29: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 114.39 Td ( 14: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 114.39 Td ( 30: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 28.35 91.72 Td ( 15: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 91.72 Td ( 31: __   __   __   __) Tj ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT /Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 16.00 Tf ET
+BT 283.46 69.04 Td ( 32: __   __   __   __) Tj ET
+
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+/MediaBox [0 0 595.28 841.89]
+>>
+endobj
+5 0 obj
+<</Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+6 0 obj
+<</Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+7 0 obj
+<</Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+8 0 obj
+<</Type /XObject
+/Subtype /Image
+/Width 33
+/Height 33
+/ColorSpace /DeviceRGB
+/BitsPerComponent 8
+/Filter /DCTDecode
+/Length 1527>>
+stream
+ˇÿˇ€ Ñ 		
+ $.' ",#(7),01444'9=82<.342			2!!22222222222222222222222222222222222222222222222222ˇ¿  ! !" ˇƒ¢          	
+   } !1AQa"q2Åë°#B±¡R—$3brÇ	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄·‚„‰ÂÊÁËÈÍÒÚÛÙıˆ˜¯˘˙       	
+  w !1AQaq"2ÅBë°±¡	#3Rbr—
+$4·%Ò&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÇÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄‚„‰ÂÊÁËÈÍÚÛÙıˆ˜¯˘˙ˇ⁄   ? è√ﬁΩáR“]Ùh“M(E
+¯rXÆ ∏ImLÓÛõu¬NI2C~WÌ“˜Wø—‡>”n∆âqe>ï®Ÿ[ æ}ô@-√áo68Åê39g√#b9Drë^mMoAûÁNª—ØÆ‡K)¶6Ò¡r±‚;®„Ö·∑ÜQ#≈Ê†ﬁ#UtA¥!B‘\Í~#”o`Ü÷œRk›J·ß±≤ª∂ ô]„∫(÷ÃÀÅ(ïºÙíWÖlòpÖ@*j∑ñ˛,∫	¨Y}í=:Qßﬁj–ﬁì=Ñ2 ë™nb•£1ùÆn?yæyàLE"˜∫m˛•‚-JÛG€Ê›€\jk®¯vK…ßÄ⁄Zã"Z≤Ü≥©À√¿ÌPxNˆñ∑^ìF‘Æ÷+kΩ=%QÿVã*ÂŸú \11õu‹ÚáYΩåvrx*–k]Èf˛‚Qq&™.#áÌË¶›-–ƒ É`uê‚6Ú’âåòÄ<Ø˛O–©Æ‡∫o˛&è¯A<aˇ B¶πˇ ÇÈø¯öıˇ ¯f_˙õøÚõˇ €hˇ Üeˇ ©ªˇ )ø˝∂Ä üVΩñ¯kQõ»Tª2‹…#€zÏ&wc√) ∏y_‚@Ä˘JÄE=≠≠≈ﬁΩí-‡ÜÚ˚˚NŒﬁ{ã@€u"åµÃ3pË¢]‡Káïº°Ê3∂ﬂ+CD÷¸G2ÈóÍ£Lé-"t∏ñ“‘XÃeñ‘£Qlªv˘≠∑lôS=∏ÁC¶ãÌ&8m¥Ñä˙Ò‚åiál1∆ Ú`yí]∫Eg]≥8vçÚ iÎ§[€∂©k°¡}¢ií‹iÚ%&Ì^‘G≥Ó√œÂ[ô˝Ë§O…p_>¡•hön¶l§mKOΩ∂∫ºπ‘-ÆRY•kYﬁy3$Ì{p¡åe’÷b<∞UÑóömï«á,Ù+oÌwW÷ó^j∑”…ysÊÀ®>\2\HTÕ Tf`∫£òÙˇ ›GHèJ“Ùk»¥ƒmÂ÷ùÊKmz◊‚9ÊÜdF2f]èpÄú¥/˛ÅüÙ&kü˜˘ø˘"è¯H~–ôÆﬂÊˇ ‰äﬂ˛÷–ˇ Ë‡o¸iü¸≤£˚[Cˇ †OÅøY¶Ú Ä<É¿üÚP¸5ˇ a[_˝µËø‰9˝Ö`ˇ “-Bºˇ ¿üÚP¸5ˇ a[_˝µËø‰9˝Ö`ˇ “-BÄ9˚ü˘+ﬁ.ˇ ∏Á˛ì‹◊ˇ 5;¸ˇ –…\œ¸ïÔ‹sˇ IÓkøˇ öù˛Ëd††(¢ä ˇŸ
+endstream
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F0a76705d18e0494dd24cb573e53aa0a8c710ec99 5 0 R
+/Ff5d2de5f3a71699ae4b2d83179e62d09e6fc4126 6 0 R
+/Ff3d9bb94eeeff89a090f4dc5bfa51473a19690b3 7 0 R
+>>
+/XObject <<
+/Id5ea71c4e8cbb192f941fdf76d4221f79143bd26 8 0 R
+>>
+/ColorSpace <<
+>>
+>>
+endobj
+9 0 obj
+<<
+/Producer (˛ˇ F P D F   1 . 7)
+/CreationDate (D:20240716162451)
+/ModDate (D:20240716162451)
+>>
+endobj
+10 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/Names <<
+/EmbeddedFiles << /Names [
+  
+] >>
+>>
+>>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000012426 00000 n 
+0000014495 00000 n 
+0000000009 00000 n 
+0000000087 00000 n 
+0000012513 00000 n 
+0000012609 00000 n 
+0000012710 00000 n 
+0000012804 00000 n 
+0000014803 00000 n 
+0000014916 00000 n 
+trailer
+<<
+/Size 11
+/Root 10 0 R
+/Info 9 0 R
+>>
+startxref
+15014
+%%EOF
