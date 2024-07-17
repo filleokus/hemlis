@@ -17,7 +17,8 @@ Hemlis is a CLI tool which generates an [age](https://github.com/FiloSottile/age
 ```
 git clone https://github.com/filleokus/hemlis.git
 cd hemlis
-go build ./cmd/hemlis-combine && ./cmd/hemlis-gen
+go build ./cmd/hemlis-combine && go build ./cmd/hemlis-gen
+./hemlis-gen 
 ```
 
 ## Usage example
