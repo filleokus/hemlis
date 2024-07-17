@@ -72,6 +72,8 @@ func SaveSecretToDisk(secret hemlis.GeneratedSecret) {
 	// Write strings to the file
 	fmt.Fprintf(file, "# Public Key: %s\n", secret.PublicKeyString())
 	fmt.Fprintf(file, "# Private Key: %s\n", secret.PrivateKeyString())
+	fmt.Fprintf(file, "# Number of shares: %d\n", secret.NumberOfShares())
+	fmt.Fprintf(file, "# Threshold: %d\n", secret.Threshold())
 	for i, share := range secret.Shares() {
 		fmt.Fprintf(file, "# Share %d (%s)\n", i, share.Identifier())
 		for _, word := range share.Words() {
