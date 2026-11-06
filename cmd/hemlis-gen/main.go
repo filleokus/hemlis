@@ -113,13 +113,13 @@ func main() {
 		os.Exit(0)
 	}
 
-	if (numberOfShares == nil || threshold == nil) || (*numberOfShares < 1 || *threshold < 1) {
-		fmt.Println("Number of shares must and threshold must be at least 2")
+	secret, err := hemlis.GenerateSecret(*numberOfShares, *threshold)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		fmt.Fprintln(os.Stderr, "Both -shares and -threshold are required: 2 <= threshold <= shares <= 255")
 		flag.Usage()
 		os.Exit(1)
 	}
-
-	secret, _ := hemlis.GenerateSecret(*numberOfShares, *threshold)
 	fmt.Printf("Public Key: %s\n", secret.PublicKeyString())
 	fmt.Printf("Private Key: %s\n", secret.PrivateKeyString())
 	fmt.Printf("Number of shares: %d\n", secret.NumberOfShares())

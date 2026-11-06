@@ -22,11 +22,11 @@ type Share struct {
 }
 
 func GenerateSecret(numberOfShares, threshold uint) (*GeneratedSecret, error) {
-	if numberOfShares < 2 {
-		return nil, errors.New("number of shares must be at least 2")
+	if numberOfShares < 2 || numberOfShares > 255 {
+		return nil, errors.New("number of shares must be between 2 and 255")
 	}
-	if threshold < 1 {
-		return nil, errors.New("threshold must be at least 1")
+	if threshold < 2 {
+		return nil, errors.New("threshold must be at least 2")
 	}
 	if threshold > numberOfShares {
 		return nil, errors.New("threshold must be less than or equal to the number of shares")
@@ -45,8 +45,11 @@ func GenerateSecret(numberOfShares, threshold uint) (*GeneratedSecret, error) {
 		return nil, fmt.Errorf("failed to decode private key: %v", err)
 	}
 
-	shares := make([]Share, numberOfShares)
-	sharesBytes, _ := SplitSecret(privateKeyBytes, threshold, numberOfShares)
+	sharesBytes, err := SplitSecret(privateKeyBytes, threshold, numberOfShares)
+	if err != nil {
+		return nil, fmt.Errorf("failed to split private key: %v", err)
+	}
+	shares := make([]Share, len(sharesBytes))
 	for shareIndex, shareBytes := range sharesBytes {
 		shares[shareIndex] = Share{bytes: shareBytes}
 	}
