@@ -29,19 +29,10 @@ The file should have the following format:
 	var combinedSecret string
 	var err error
 
-	// Check if there is data in STDIN
-	fileInfo, _ := os.Stdin.Stat()
-	if (fileInfo.Mode() & os.ModeCharDevice) == 0 {
-		fmt.Println("Reading shares from STDIN. Press Ctrl+D to finish.")
-		combinedSecret, err = readAndParseShares(bufio.NewScanner(os.Stdin))
-		if err != nil {
-			fmt.Printf("Error reading or parsing shares from STDIN: %s\n", err)
-			os.Exit(1)
-		}
-	} else if *filePath != "" {
+	if *filePath != "" {
 		file, err := os.Open(*filePath)
 		if err != nil {
-			fmt.Printf("error opening file: %s\n", err)
+			fmt.Printf("Error opening file: %s\n", err)
 			os.Exit(1)
 		}
 		defer file.Close()
@@ -50,8 +41,15 @@ The file should have the following format:
 			fmt.Printf("Error reading or parsing shares from file: %s\n", err)
 			os.Exit(1)
 		}
+	} else if stdinIsPiped() {
+		fmt.Println("Reading shares from STDIN. Press Ctrl+D to finish.")
+		combinedSecret, err = readAndParseShares(bufio.NewScanner(os.Stdin))
+		if err != nil {
+			fmt.Printf("Error reading or parsing shares from STDIN: %s\n", err)
+			os.Exit(1)
+		}
 	} else {
-		fmt.Println("You must specify a file path using the -file flag or pipe data into STDIN.")
+		fmt.Println("You must specify a file path using the -f flag or pipe data into STDIN.")
 		flag.Usage()
 		os.Exit(1)
 	}
@@ -60,24 +58,19 @@ The file should have the following format:
 	fmt.Println("If not enough shares were used, the above secret will be incorrect")
 }
 
-func readAndParseShares(scanner *bufio.Scanner) (string, error) {
-	var shares [][]string
-	shareIndex := 0
-	shares = append(shares, []string{})
-	for scanner.Scan() {
-		line := scanner.Text()
-		if strings.HasPrefix(line, "#") {
-			continue
-		}
-		if line == "" {
-			shareIndex++
-			shares = append(shares, []string{})
-			continue
-		}
-		shares[shareIndex] = append(shares[shareIndex], strings.TrimSpace(line))
+// stdinIsPiped reports whether STDIN is a pipe or file rather than a terminal.
+func stdinIsPiped() bool {
+	fileInfo, err := os.Stdin.Stat()
+	if err != nil {
+		return false
 	}
-	if err := scanner.Err(); err != nil {
-		fmt.Fprintf(os.Stderr, "reading standard input: %v\n", err)
+	return fileInfo.Mode()&os.ModeCharDevice == 0
+}
+
+func readAndParseShares(scanner *bufio.Scanner) (string, error) {
+	shares, err := parseShares(scanner)
+	if err != nil {
+		return "", err
 	}
 
 	combinedSecret, err := combineShares(shares)
@@ -85,6 +78,38 @@ func readAndParseShares(scanner *bufio.Scanner) (string, error) {
 		return "", fmt.Errorf("could not combine shares: %s", err)
 	}
 	return combinedSecret, nil
+}
+
+// parseShares reads shares from the scanner. Each share is a block of
+// words, one per line. Blocks are separated by one or more blank lines,
+// and lines starting with # are ignored. Surrounding whitespace is ignored.
+func parseShares(scanner *bufio.Scanner) ([][]string, error) {
+	var shares [][]string
+	var current []string
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if strings.HasPrefix(line, "#") {
+			continue
+		}
+		if line == "" {
+			if len(current) > 0 {
+				shares = append(shares, current)
+				current = nil
+			}
+			continue
+		}
+		current = append(current, line)
+	}
+	if err := scanner.Err(); err != nil {
+		return nil, fmt.Errorf("could not read shares: %w", err)
+	}
+	if len(current) > 0 {
+		shares = append(shares, current)
+	}
+	if len(shares) == 0 {
+		return nil, fmt.Errorf("no shares found in input")
+	}
+	return shares, nil
 }
 
 func combineShares(shares [][]string) (string, error) {
