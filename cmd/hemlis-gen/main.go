@@ -8,13 +8,14 @@ import (
 	"time"
 
 	"github.com/filleokus/hemlis/internal/hemlis"
+	"github.com/filleokus/hemlis/internal/version"
 	"github.com/johnfercher/maroto/v2/pkg/core"
 )
 
 func GeneratePDF(secret hemlis.GeneratedSecret, share hemlis.Share, pdfOptions PDFOptions) core.Document {
 	currentTime := time.Now().UTC().Format("2006-01-02T15:04:05Z")
 	parameters := PDFParams{
-		HemlisVersion:    "0.1.0",
+		HemlisVersion:    version.Version,
 		CreationDate:     currentTime,
 		NumberOfShares:   ParamRedacted,
 		Threshold:        ParamRedacted,
@@ -92,6 +93,7 @@ type PDFOptions struct {
 
 func main() {
 	// Define flags
+	printVersion := flag.Bool("v", false, "Print version information")
 	numberOfShares := flag.Uint("shares", 0, "Number of shares to generate")
 	threshold := flag.Uint("threshold", 0, "Number of shares required to reconstruct the secret")
 	output := flag.String("output", "pdf,cli,txt", "Output format (pdf, txt, cli) separated by comma (default: pdf, cli, txt)")
@@ -105,6 +107,11 @@ func main() {
 	// txtFilePath := flag.String("txt-path", "", "Path to save the private key, public key and shares as a text file (default: value of public key)")
 
 	flag.Parse()
+
+	if *printVersion {
+		fmt.Printf("hemlis-gen %s\ncommit %s, built at %s\n", version.Version, version.Commit, version.BuildDate)
+		os.Exit(0)
+	}
 
 	if (numberOfShares == nil || threshold == nil) || (*numberOfShares < 1 || *threshold < 1) {
 		fmt.Println("Number of shares must and threshold must be at least 2")
