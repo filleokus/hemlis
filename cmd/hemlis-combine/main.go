@@ -11,13 +11,24 @@ import (
 	"github.com/filleokus/hemlis/internal/hemlis"
 )
 
+var Version = "dev"
+var Commit = "unknown"
+var BuildDate = "unknown"
+
 func main() {
+	version := flag.Bool("v", false, "Print version information")
 	filePath := flag.String("f", "", `Path to the file containing shares. 
 The file should have the following format:
 - Per share, write one word per line (33 words per share)
 - Leave a blank line between shares
 - (Lines starting with # are ignored as comments)`)
 	flag.Parse()
+
+	if *version {
+		fmt.Printf("hemlis-combine %s\ncommit %s, built at %s\n", Version, Commit, BuildDate)
+		os.Exit(0)
+	}
+
 	var combinedSecret string
 	var err error
 
