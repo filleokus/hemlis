@@ -13,6 +13,11 @@ func TestV_0_1_0_CDC7BFD(t *testing.T) {
 	testVersion("v.0.1.0-cdc7bfd", "AGE-SECRET-KEY-14CGCDKJYXUSFF2KZU2JKR9423U69PN3VZPMK8CAT73X7E9NQJM4SK9RZJF", t)
 }
 
+// Unmodified hemlis-gen .txt output, including the trailing blank line
+func TestV_0_2_0_51F96FA(t *testing.T) {
+	testVersion("v.0.2.0-51f96fa", "AGE-SECRET-KEY-1ZP9YD4E6XF6S4DZHRA9X50QXZFAUCTQ56KC2QTC36HMEXSLNJ66SC84H83", t)
+}
+
 func testVersion(versionAndHash string, expectedSecret string, t *testing.T) {
 	file, err := os.Open(fmt.Sprintf("test_data/%s.txt", versionAndHash))
 	if err != nil {
